@@ -1,0 +1,77 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>form.jsp</title>
+</head>
+<body>
+<form action="form_ok.jsp" method = "post">
+    이름: <input type="text" name="username"><br><br>
+    생일: <input type="date" id="start" name="date"
+               value="2022-10-14"
+               min="2018-01-01" max="2030-12-31">
+    <br><br>
+    전화번호: <input type="tel" id="phone" name="phone">
+    <br><br>
+    학교: <input type="text" name="school"><br><br>
+    학년: <select name="grade" style="width: 160px;">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+</select><br><br>
+
+    전공: <select name="major" style="width: 160px;">
+    <option value="컴퓨터공학과">컴퓨터공학과</option>
+    <option value="간호학과">간호학과</option>
+    <option value="화학과">화학과</option>
+    <option value="경영학과">경영학과</option>
+</select><br><br>
+
+    <fieldset>
+        <legend>성별:</legend>
+
+        <div>
+            <input type="radio" id="man" name="gender" value="man"
+                   checked>
+            <label for="man">남자</label>
+        </div>
+
+        <div>
+            <input type="radio" id="woman" name="gender" value="woman">
+            <label for="woman">여자</label>
+        </div>
+    </fieldset>
+    <br>
+
+    <fieldset>
+        <legend>좋아하는 과일</legend>
+
+        <div>
+            <input type="checkbox" id="apple" name="fruit[0]" checked value="사과">
+            <label for="apple">사과</label>
+        </div>
+
+        <div>
+            <input type="checkbox" id="banana" name="fruit[1]" value="바나나">
+            <label for="banana">바나나</label>
+        </div>
+        <div>
+            <input type="checkbox" id="orange" name="fruit[2]" value="오렌지">
+            <label for="orange">오렌지</label>
+        </div>
+    </fieldset>
+    <br>
+
+    좋아하는 색깔:
+    <input type="color" id="favcolor" name="favcolor" value="#ff0000"><br><br>
+
+    <label for="story">기타:</label>
+
+    <textarea id="story" name="etc"
+              rows="5" cols="33">
+</textarea><br><br>
+
+    <input type="submit" value="Send">
+</form>
+</body>
+</html>
